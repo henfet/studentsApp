@@ -1,0 +1,10 @@
+<H2>Crear curso</H2>
+<form>
+    <div class="form-group">
+        <label for="nombreCurso">Nombre del curso</label>
+        <input name="nombre" type="text" class="form-control" id="nombreCurso" placeholder="Ingrese nombre del curso..."
+            [(ngModel)]="curso.nombreCurso" />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="crearCurso()" >Guardar</button>
+    <button type="submit" class="btn btn-light" (click)="cancelar()" >Cancelar</button>
+</form>

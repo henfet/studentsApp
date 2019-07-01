@@ -1,0 +1,19 @@
+<H2>Editar estudiante</H2>
+<form>
+    <div class="form-group">
+        <label for="idEstudiante">Id del estudiante</label>
+        <input name="idEstudiante" type="text" class="form-control" id="idEstudiante" readonly
+            [(ngModel)]="estudiante.id" />
+        <label for="nombreEstudiante">Nombre del estudiante</label>
+        <input name="nombre" type="text" class="form-control" id="nombreEstudiante"
+            [(ngModel)]="estudiante.nombre" />
+    </div>
+    <div class="form-group">
+        <label for="cursoControlSelect">Curso</label>
+        <select name="nombreCurso" class="form-control" id="cursoControlSelect" [(ngModel)]="estudiante.cursoId">
+            <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.nombreCurso}}</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="editarEstudiante()">Actualizar</button>
+    <button type="submit" class="btn btn-light" (click)="cancelar()">Cancelar</button>
+</form>

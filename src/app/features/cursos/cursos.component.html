@@ -1,0 +1,24 @@
+<h1>Listado de Cursos</h1>
+<Button type="button" class="btn btn-success mb-2" (click)="crearCurso()" >
+    <i class="fas fa-plus"></i> Crear</Button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre del curso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let curso of cursos">
+            <th>{{curso.id}}</th>
+            <td>{{curso.nombreCurso}}</td>
+            <td>
+                <div class="btn-group" role="group" >
+                    <button type="button" class="btn btn-info" (click)="editarCurso(curso.id)" ><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="eliminarCurso(curso.id)" ><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

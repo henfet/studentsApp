@@ -1,0 +1,27 @@
+<h1>Listado de Estudiantes</h1>
+<Button type="button" class="btn btn-success mb-2" (click)="crearEstudiante()" >
+    <i class="fas fa-plus"></i> Crear</Button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre del estudiante</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let estudiante of estudiantes">
+            <th>{{estudiante.id}}</th>
+            <td>{{estudiante.nombre}}</td>
+            <td>{{estudiante.curso.nombreCurso}}</td>
+            <td>
+                <div class="btn-group" role="group" >
+                    <button type="button" class="btn btn-info" (click)="editarEstudiante(estudiante.id)" ><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="eliminarEstudiante(estudiante.id)" ><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

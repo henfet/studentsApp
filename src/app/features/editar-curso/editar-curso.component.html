@@ -1,0 +1,13 @@
+<H2>Editar curso</H2>
+<form>
+    <div class="form-group">
+        <label for="idCurso">Id del curso</label>
+        <input name="idCurso" type="text" class="form-control" id="idCurso" readonly
+            [(ngModel)]="curso.id" />
+        <label for="nombreCurso">Nombre del curso</label>
+        <input name="nombre" type="text" class="form-control" id="nombreCurso"
+            [(ngModel)]="curso.nombreCurso" />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="editarCurso()">Actualizar</button>
+    <button type="submit" class="btn btn-light" (click)="cancelar()">Cancelar</button>
+</form>
