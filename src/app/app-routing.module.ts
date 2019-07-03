@@ -8,6 +8,8 @@ import { CursosComponent } from './features/cursos/cursos.component';
 import { CrearCursoComponent } from './features/crear-curso/crear-curso.component';
 import { EditarCursoComponent } from './features/editar-curso/editar-curso.component';
 import { PaginaNoSeEncuentraComponent } from './features/pagina-no-se-encuentra/pagina-no-se-encuentra.component';
+import { QuestionsComponent } from './features/questions/questions.component';
+import { QuestionsTypeComponent } from './features/questions-type/questions-type.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'cursos', component: CursosComponent },
   { path: 'cursos/crear', component: CrearCursoComponent },
   { path: 'cursos/editar/:id', component: EditarCursoComponent },
+  { path: 'preguntas', component: QuestionsComponent },
+  { path: 'tiposPregunta', component: QuestionsTypeComponent },
   { path: '**', component: PaginaNoSeEncuentraComponent }
 ];
 

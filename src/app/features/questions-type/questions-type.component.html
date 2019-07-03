@@ -1,0 +1,28 @@
+<h1>Type of questions</h1>
+<Button type="button" class="btn btn-success mb-2" (click)="createTypeQuestion()">
+    <i class="fas fa-plus"></i> Create</Button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type of question</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let questionType of questionTypes">
+            <th>{{questionType.id}}</th>
+            <td>{{questionType.type}}</td>
+            <td>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-info" (click)="editQuestionType(questionType.id)">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger" (click)="deleteQuestionType(questionType.type)">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

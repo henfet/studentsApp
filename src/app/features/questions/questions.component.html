@@ -1,0 +1,24 @@
+<h1>Questions</h1>
+<Button type="button" class="btn btn-success mb-2" (click)="createQuestion()" >
+    <i class="fas fa-plus"></i> Create</Button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Question</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let question of questions">
+            <th>{{question.id}}</th>
+            <td>{{question.sentence}}</td>
+            <td>
+                <div class="btn-group" role="group" >
+                    <button type="button" class="btn btn-info" (click)="editQuestion(question.id)" ><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="deleteQuestion(question.id)" ><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

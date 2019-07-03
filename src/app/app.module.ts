@@ -14,7 +14,8 @@ import { EstudiantesComponent } from './features/estudiantes/estudiantes.compone
 import { CursosComponent } from './features/cursos/cursos.component';
 import { CrearCursoComponent } from './features/crear-curso/crear-curso.component';
 import { EditarCursoComponent } from './features/editar-curso/editar-curso.component';
-import { RequisicionesComponent } from './requisiciones/requisiciones.component';
+import { QuestionsComponent } from './features/questions/questions.component';
+import { QuestionsTypeComponent } from './features/questions-type/questions-type.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RequisicionesComponent } from './requisiciones/requisiciones.component'
     CursosComponent,
     CrearCursoComponent,
     EditarCursoComponent,
-    RequisicionesComponent
+    QuestionsComponent,
+    QuestionsTypeComponent
   ],
   imports: [
     BrowserModule,
